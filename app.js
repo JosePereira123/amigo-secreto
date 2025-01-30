@@ -15,10 +15,13 @@ nomes.push(nome.value);
 ;
 
     let lista = document.getElementById('listaAmigos');
-
-    lista.innerHTML = nome.value;
-nome.value = '' 
-return;   
-
     
+
+    if (lista.textContent == '') {
+        lista.innerHTML = '<li>' +nome.value + '</li>';
+    } else {
+        lista.innerHTML = lista.textContent + '<li>' + amigo.value + '</li>';
+    }
+    amigo.value = '';
 }
+

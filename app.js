@@ -14,14 +14,14 @@ function adicionarAmigo() {
 nomes.push(nome.value);
 ;
 
-    let lista = document.getElementById('listaAmigos');
+        let lista = document.getElementById('listaAmigos');
+        lista.innerHTML = ''
     
 
-    if (lista.textContent == '') {
-        lista.innerHTML = '<li>' +nome.value + '</li>';
-    } else {
-        lista.innerHTML = lista.textContent + '<li>' + amigo.value + '</li>';
+    for (let i = 0; i < nomes.length; i++) {
+        lista.innerHTML += '<li>' + nomes[i] + '</li>';
     }
-    amigo.value = '';
+    
+    
 }
 
